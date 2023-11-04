@@ -22,65 +22,146 @@
   <body>
     <!-- Header -->
     <header>
-      <nav>
-        <a class="header-logo" href="index.html"
-          ><span class="header-logo-italic">SIMPLY</span> CHOCOLATE</a
-        >
-        <img src="./images/logo.png" alt="site logo" />
-        <ul>
-          <li class="nav-list"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-list">
-            <a class="nav-link" href="#made">How it’s made?</a>
+      <div class="container header-container">
+        <nav class="nav">
+          <a class="header-logo" href="index.html"
+            ><span class="header-logo-italic">SIMPLY&nbsp;</span>CHOCOLATE</a
+          >
+
+          <div class="nav-wrap">
+            <ul class="nav-list">
+              <li class="nav-items"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-items">
+                <a class="nav-link" href="#made">How it’s made?</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-link" href="#loved">Chocolate is loved</a>
+              </li>
+            </ul>
+            <ul class="header-soc-list">
+              <li class="header-soc-items">
+                <a
+                  class="header-soc-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferre"
+                >
+                  <svg class="header-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc-items">
+                <a
+                  class="header-soc-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferre"
+                >
+                  <svg class="header-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc-items">
+                <a
+                  class="header-soc-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferre"
+                >
+                  <svg class="header-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-logo-twit"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button class="open-menu-button" type="button" id="toggleButton">
+          <svg class="open-button-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-open-btn"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu">
+        <button class="close-menu-button" type="button" id="closeButton">
+          <svg class="close-button-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-items">
+              <a class="mobile-menu-link" href="#">Home</a>
+            </li>
+            <li class="mobile-menu-items">
+              <a class="mobile-menu-link" href="#made">How it’s made?</a>
+            </li>
+            <li class="mobile-menu-items">
+              <a class="mobile-menu-link" href="#loved">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-soc-list">
+          <li class="mobile-soc-items">
+            <a
+              class="mobile-soc-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferre"
+            >
+              <svg class="mobile-soc-icon" width="24" height="24">
+                <use href="/images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
-          <li class="nav-list">
-            <a class="nav-link" href="#loved"></a>Chocolate is loved
+          <li class="mobile-soc-items">
+            <a
+              class="mobile-soc-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferre"
+            >
+              <svg class="mobile-soc-icon" width="24" height="24">
+                <use href="/images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-soc-items">
+            <a
+              class="mobile-soc-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferre"
+            >
+              <svg class="mobile-soc-icon" width="24" height="24">
+                <use href="/images/icons.svg#icon-logo-twit"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <ul>
-          <li>
-            <a
-              class="header-soc-link"
-              href=""
-              target="_blank"
-              rel="noopener noreferre"
-            ></a
-            >Fb
-          </li>
-          <li>
-            <a
-              class="header-soc-link"
-              href=""
-              target="_blank"
-              rel="noopener noreferre"
-            ></a
-            >Inst
-          </li>
-          <li>
-            <a
-              class="header-soc-link"
-              href=""
-              target="_blank"
-              rel="noopener noreferre"
-            ></a
-            >Twit
-          </li>
-        </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
       <!-- Main section -->
       <section class="main">
-        <h1 class="main-heading">
-          Treat yourself or a loved one to our finest ingredients for a moment
-          of pure delight!
-        </h1>
-        <button class="main-button" type="button">Buy now</button>
-        <a class="main-link" href="#made">How it’s made</a>
-        <a class="main-scroll" href="#footer">scroll down</a>
+        <div class="main-container container">
+          <h1 class="main-heading">
+            Treat yourself or a loved one to our finest ingredients for a moment
+            of pure delight!
+          </h1>
+          <div class="main-wrap">
+            <button class="main-button" type="button">Buy now</button>
+            <a class="main-link" href="#made">How it’s made</a>
+            <a class="main-scroll" href="#footer">scroll down</a>
+          </div>
+        </div>
       </section>
       <!-- Description -->
-      <section class="description">
+      <!-- <section class="description">
         <h2 class="visually-hidden">Features</h2>
         <ul>
           <li>
@@ -112,9 +193,9 @@
             </p>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Section Taste -->
-      <section>
+      <!-- <section>
         <h2 class="taste-heading">
           It all adds up to one exceptional
           <span class="taste-text">taste</span> sensation
@@ -184,9 +265,9 @@
             <h3 class="taste-title">COCONUT OIL</h3>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Section How it’s made -->
-      <section id="made">
+      <!-- <section id="made">
         <h2 class="how-made-heading">
           How it’s <span class="how-made-text">made</span>?
         </h2>
@@ -230,9 +311,9 @@
             </p>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Section Our products -->
-      <section>
+      <!-- <section>
         <h2>Our products</h2>
         <ul>
           <li>
@@ -324,9 +405,9 @@
             <span>54 UAH</span>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Section Top sellers -->
-      <section>
+      <!-- <section>
         <h2>Top sellers</h2>
         <ul>
           <li>
@@ -357,9 +438,9 @@
             <h3>DARK CHOCOLATE</h3>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Section Chocolate is loved -->
-      <section id="loved">
+      <!-- <section id="loved">
         <h2>Chocolate is loved</h2>
         <ul>
           <li>
@@ -404,9 +485,9 @@
             </p>
           </li>
         </ul>
-      </section>
+      </section> -->
     </main>
-    <footer id="footer">
+    <!-- <footer id="footer">
       <h2>Chocolate a delicious cure for a bad day</h2>
       <h3>Social networks</h3>
       <ul>
@@ -426,6 +507,7 @@
           <li><a href="#loved">Chocolate is loved</a></li>
         </ul>
       </nav>
-    </footer>
+    </footer> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
