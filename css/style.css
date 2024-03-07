@@ -72,7 +72,7 @@ img {
   display: flex;
   align-items: center;
   color: #111;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: -0.03em;
@@ -259,12 +259,12 @@ img {
   background-color: #fd9222;
   padding: 12px 28px;
   margin-right: 14px;
-  transition: background-color 300ms linear,
-  color 300ms linear;
+  transition: background-color 300ms linear, color 300ms linear;
 }
 
-.main-button:hover, .main-button:focus {
-  background-color: #FCF1E0;
+.main-button:hover,
+.main-button:focus {
+  background-color: #fcf1e0;
   color: #fd9222;
 }
 
@@ -276,11 +276,11 @@ img {
   border-radius: 100px;
   border: 1px solid #fff;
   padding: 12px 28px;
-  transition: border-color 300ms linear,
-  color 300ms linear;
+  transition: border-color 300ms linear, color 300ms linear;
 }
 
-.main-link:hover, .main-link:focus {
+.main-link:hover,
+.main-link:focus {
   border-color: #fd9222;
   color: #fd9222;
 }
@@ -301,7 +301,7 @@ img {
   content: "";
   width: 28px;
   height: 28px;
-  background-image: url(../images/icons.svg#icon-scroll);
+  background-image: url(./images/icons.svg#icon-scroll);
   border-radius: 50%;
   color: #fd9222;
   background-color: #ffffff;
@@ -311,11 +311,13 @@ img {
   transition: background-color 300ms linear;
 }
 
-.main-scroll:hover, .main-scroll:focus {
+.main-scroll:hover,
+.main-scroll:focus {
   color: #fd9222;
 }
 
-.main-scroll:hover::after, .main-scroll:focus::after {
+.main-scroll:hover::after,
+.main-scroll:focus::after {
   background-color: #fd9222;
 }
 
@@ -432,6 +434,10 @@ img {
   margin-bottom: 32px;
 }
 
+.made-image {
+  width: 100%;
+}
+
 .made-wrap {
   border-radius: 15px;
   background: #fff;
@@ -443,6 +449,7 @@ img {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  margin-bottom: 20px;
 }
 .made-list {
 }
@@ -649,7 +656,8 @@ img {
   transition: background-color 300ms linear;
 }
 
-.loved-button:hover, .loved-button:focus {
+.loved-button:hover,
+.loved-button:focus {
   background-color: #fd9222;
   color: #ffffff;
 }
@@ -799,6 +807,205 @@ img {
   color: #fd9222;
 }
 
+/* Modal */
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  width: 311px;
+  height: 622px;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 32px;
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-icon {
+  fill: transparent;
+  stroke: #2e2f42;
+}
+
+.modal-hedding {
+  width: 255px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.form-button {
+  display: block;
+  min-width: 93px;
+  height: 41px;
+  color: #ffffff;
+  text-align: center;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 100px;
+  border: none;
+  background-color: rgb(253, 146, 34);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: rgb(252, 241, 224);
+  color: rgb(253, 146, 34);
+}
+
+.modal-field:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: rgb(253, 146, 34);
+}
+
+.modal-input:focus + .modal-icon {
+  stroke: rgb(253, 146, 34);
+}
+
+.modal-label {
+  color: rgba(64, 64, 64, 0.3);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: transparent;
+  stroke: #2e2f42;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-wrap {
+  margin-bottom: 16px;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 90px;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  padding: 14px 18px;
+  resize: none;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+}
+
+.modal-textarea:focus {
+  border-color: rgb(253, 146, 34);
+}
+
+.modal-checkbox {
+  margin-bottom: 32px;
+}
+
+.checkbox-cover:checked + .checkbox-label .checkbox-text {
+  background-color: rgb(253, 146, 34);
+  border: none;
+  fill: #f4f4fd;
+}
+
+.checkbox-label {
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.checkbox-text {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-privacy {
+  text-decoration: underline;
+  color: rgb(253, 146, 34);
+}
+
 /* Media */
 
 @media screen and (min-width: 768px) {
@@ -818,13 +1025,10 @@ img {
 
   .nav-wrap {
     display: flex;
+    gap: 16px;
     justify-content: center;
     align-items: center;
     margin-left: auto;
-  }
-
-  .nav-list {
-    margin-right: 28px;
   }
 
   .nav-link {
@@ -929,6 +1133,10 @@ img {
     padding: 32px;
   }
 
+  .made-subtitle {
+    margin-bottom: 28px;
+  }
+
   .products-list {
     display: flex;
     flex-wrap: wrap;
@@ -988,16 +1196,14 @@ img {
   }
 
   .footer-address-wrap {
-margin-left: auto;
+    margin-left: auto;
   }
 
   .footer-social-wrap {
-
   }
 
   .footer-bottom {
     display: flex;
-
   }
 
   .footer-nav-list {
@@ -1011,6 +1217,48 @@ margin-left: auto;
 
   .footer-form-input {
     width: 233px;
+  }
+
+  .modal {
+    width: 517px;
+    height: 794px;
+    padding: 40px;
+  }
+
+  .modal-hedding {
+    width: 298px;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .modal-input {
+    height: 68px;
+  }
+
+  .modal-textarea {
+    height: 137px;
+    font-size: 18px;
+    padding: 22px 24px;
+  }
+
+  .modal-textarea::placeholder {
+    font-size: 18px;
+  }
+
+  .modal-field:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .textarea-wrap {
+    margin-bottom: 18px;
+  }
+
+  .modal-checkbox {
+    margin-bottom: 40px;
+  }
+
+  .form-button {
+    min-width: 117px;
   }
 }
 
@@ -1043,6 +1291,10 @@ margin-left: auto;
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1136px;
+  }
+
+  .header-logo {
+    font-size: 18px;
   }
 
   .nav-list {
@@ -1082,10 +1334,12 @@ margin-left: auto;
 
   .made-add-wrap {
     display: flex;
+    gap: 20px;
   }
 
-  .made-wrap {
-    margin-left: 20px;
+  .made-image {
+    height: 100%;
+    width: 200vh;
   }
 
   .products-list {
@@ -1128,13 +1382,13 @@ margin-left: auto;
     margin-left: 50px;
   }
 
-.footer-form-input {
-width: 313px;
-}
+  .footer-form-input {
+    width: 313px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
-  .made-picture {
+  .made-image {
     margin-bottom: 20px;
   }
 }

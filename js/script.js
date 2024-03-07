@@ -27,3 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.addEventListener("click", toggleMenu);
   closeButton.addEventListener("click", closeMenu);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("modalOpen");
+  const closeBtn = document.getElementById("modalClose");
+  const modal = document.querySelector(".backdrop");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  } 
+});
